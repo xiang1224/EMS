@@ -33,10 +33,11 @@ input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: none;
+    /* 上下間距 */
     border-radius: 6px;
-    font-size: 16px;
-    text-align: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    /* 確保 padding 和 border 被計算進寬度 */
 }
 
 /* 按鈕 */
@@ -56,6 +57,62 @@ button {
 
 button:hover {
     background: #FFC107;
+}
+
+/* 忘記密碼連結 */
+.forgot-btn {
+    color: #FFD700;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.forgot-btn:hover {
+    text-decoration: underline;
+}
+
+/* 模態框 (Modal) */
+.modal {
+    display: none;
+    /* 預設隱藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 背景半透明 */
+}
+
+/* 模態框內容 */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    /* 確保文字顯示為黑色 */
+}
+
+/* 關閉按鈕 */
+.close-btn {
+    color: #333;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
 }
 
 /* 錯誤訊息 */

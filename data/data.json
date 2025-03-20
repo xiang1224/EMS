@@ -71,17 +71,13 @@
         ]
     },
     {
-        "id": "milin",
-        "password": "67890",
+        "id": "114514",
+        "password": "1919810",
         "name": "吳靡琳",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 84
-            },
-            {
-                "exam": "小考 2",
-                "score": 80
+                "score": 71
             }
         ]
     },
@@ -164,17 +160,13 @@
         ]
     },
     {
-        "id": "yunling",
-        "password": "33445",
+        "id": "GUL",
+        "password": "123456",
         "name": "顧雲翎",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 89
-            },
-            {
-                "exam": "小考 2",
-                "score": 91
+                "score": 65
             }
         ]
     },

@@ -10,12 +10,23 @@
 
 <body>
     <div class="container">
-        <h2>微光學院救護科 - 學生登入</h2>
-        <input type="text" id="studentID" placeholder="輸入學號">
+        <h2>微光學院救護科 - 成績查詢系統</h2>
+        <input type="text" id="studentID" placeholder="輸入帳號">
         <input type="password" id="password" placeholder="輸入密碼">
         <button onclick="login()">登入</button>
+        <p><a href="#" class="forgot-btn" onclick="openModal()">忘記帳號/密碼</a></p>
         <p id="error-message"></p>
     </div>
+
+    <!-- 忘記帳密 Modal -->
+    <div id="forgotModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>忘記帳號或密碼</h3>
+            <p>請寫信至 <strong>黃曉翔老師</strong> 信箱</p>
+        </div>
+    </div>
+
     <script src="./js/script.js"></script>
 </body>
 

@@ -20,6 +20,15 @@ async function login() {
     }
 }
 
+function openModal() {
+    document.getElementById("forgotModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("forgotModal").style.display = "none";
+}
+
+
 // 顯示個人成績（多次考試）
 function displayGrade() {
     const student = JSON.parse(localStorage.getItem('loggedInStudent'));

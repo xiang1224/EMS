@@ -115,17 +115,13 @@
         ]
     },
     {
-        "id": "yating",
-        "password": "01234",
+        "id": "711",
+        "password": "3700",
         "name": "葉雅婷",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 85
-            },
-            {
-                "exam": "小考 2",
-                "score": 82
+                "score": 96
             }
         ]
     },

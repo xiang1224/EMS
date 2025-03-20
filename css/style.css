@@ -1,0 +1,93 @@
+/* 全局樣式 */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: linear-gradient(135deg, #004466, #002233);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+}
+
+/* 容器樣式 */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* 標題樣式 */
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+/* 輸入框 */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 按鈕 */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #FFD700;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #FFC107;
+}
+
+/* 錯誤訊息 */
+#error-message {
+    color: #FF4444;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 表格樣式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: white;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 登出按鈕 */
+.logout-btn {
+    background: #FF4444;
+}
+
+.logout-btn:hover {
+    background: #DD3333;
+}

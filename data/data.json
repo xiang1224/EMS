@@ -1,0 +1,90 @@
+[
+    {
+        "id": "yaojun0905",
+        "password": "a338188",
+        "name": "明智熙",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 88
+            }
+            
+        ]
+    },
+    {
+        "id": "student2",
+        "password": "23456",
+        "name": "小華",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 90
+            },
+            {
+                "exam": "小考 2",
+                "score": 88
+            },
+            {
+                "exam": "小考 3",
+                "score": 92
+            }
+        ]
+    },
+    {
+        "id": "student3",
+        "password": "34567",
+        "name": "小美",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 78
+            },
+            {
+                "exam": "小考 2",
+                "score": 80
+            },
+            {
+                "exam": "小考 3",
+                "score": 85
+            }
+        ]
+    },
+    {
+        "id": "student4",
+        "password": "45678",
+        "name": "小強",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 88
+            },
+            {
+                "exam": "小考 2",
+                "score": 86
+            },
+            {
+                "exam": "小考 3",
+                "score": 89
+            }
+        ]
+    },
+    {
+        "id": "student5",
+        "password": "56789",
+        "name": "小麗",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 92
+            },
+            {
+                "exam": "小考 2",
+                "score": 95
+            },
+            {
+                "exam": "小考 3",
+                "score": 94
+            }
+        ]
+    }
+]

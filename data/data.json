@@ -78,17 +78,13 @@
         ]
     },
     {
-        "id": "yiting",
-        "password": "78901",
+        "id": "gpai",
+        "password": "1234567",
         "name": "李逸庭",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 93
-            },
-            {
-                "exam": "小考 2",
-                "score": 95
+                "score": 91
             }
         ]
     },

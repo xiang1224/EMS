@@ -1,5 +1,106 @@
 [
     {
+        "id": "ayyan",
+        "password": "12345",
+        "name": "安幼妍",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 85
+            },
+            {
+                "exam": "小考 2",
+                "score": 90
+            }
+        ]
+    },
+    {
+        "id": "wufeng",
+        "password": "23456",
+        "name": "吳風",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 88
+            },
+            {
+                "exam": "小考 2",
+                "score": 92
+            }
+        ]
+    },
+    {
+        "id": "XiaMu",
+        "password": "LianSi",
+        "name": "夏目蓮司",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 90
+            }
+        ]
+    },
+    {
+        "id": "linrin",
+        "password": "45678",
+        "name": "森田凜琳",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 89
+            },
+            {
+                "exam": "小考 2",
+                "score": 87
+            }
+        ]
+    },
+    {
+        "id": "daixi",
+        "password": "56789",
+        "name": "林黛希",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 91
+            },
+            {
+                "exam": "小考 2",
+                "score": 85
+            }
+        ]
+    },
+    {
+        "id": "milin",
+        "password": "67890",
+        "name": "吳靡琳",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 84
+            },
+            {
+                "exam": "小考 2",
+                "score": 80
+            }
+        ]
+    },
+    {
+        "id": "yiting",
+        "password": "78901",
+        "name": "李逸庭",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 93
+            },
+            {
+                "exam": "小考 2",
+                "score": 95
+            }
+        ]
+    },
+    {
         "id": "yaojun0905",
         "password": "a338188",
         "name": "明智熙",
@@ -8,13 +109,12 @@
                 "exam": "小考 1",
                 "score": 88
             }
-            
         ]
     },
     {
-        "id": "student2",
-        "password": "23456",
-        "name": "小華",
+        "id": "jinxuan",
+        "password": "90123",
+        "name": "陳錦軒",
         "grades": [
             {
                 "exam": "小考 1",
@@ -23,36 +123,110 @@
             {
                 "exam": "小考 2",
                 "score": 88
+            }
+        ]
+    },
+    {
+        "id": "yating",
+        "password": "01234",
+        "name": "葉雅婷",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 85
             },
             {
-                "exam": "小考 3",
+                "exam": "小考 2",
+                "score": 82
+            }
+        ]
+    },
+    {
+        "id": "niao",
+        "password": "11223",
+        "name": "韻律波 鳥",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 92
+            },
+            {
+                "exam": "小考 2",
+                "score": 94
+            }
+        ]
+    },
+    {
+        "id": "1120809",
+        "password": "0871031",
+        "name": "白玥瑤",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 82
+            }
+        ]
+    },
+    {
+        "id": "yunling",
+        "password": "33445",
+        "name": "顧雲翎",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 89
+            },
+            {
+                "exam": "小考 2",
+                "score": 91
+            }
+        ]
+    },
+    {
+        "id": "goldenmao",
+        "password": "goldenmao",
+        "name": "顧雲綺",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 79
+            }
+        ]
+    },
+    {
+        "id": "chenxi",
+        "password": "55667",
+        "name": "林晨曦",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 94
+            },
+            {
+                "exam": "小考 2",
+                "score": 96
+            }
+        ]
+    },
+    {
+        "id": "luqi",
+        "password": "66778",
+        "name": "哈蘿娜·璐姬·卡蜜拉",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 90
+            },
+            {
+                "exam": "小考 2",
                 "score": 92
             }
         ]
     },
     {
-        "id": "student3",
-        "password": "34567",
-        "name": "小美",
-        "grades": [
-            {
-                "exam": "小考 1",
-                "score": 78
-            },
-            {
-                "exam": "小考 2",
-                "score": 80
-            },
-            {
-                "exam": "小考 3",
-                "score": 85
-            }
-        ]
-    },
-    {
-        "id": "student4",
-        "password": "45678",
-        "name": "小強",
+        "id": "lehai",
+        "password": "77889",
+        "name": "鍾樂海",
         "grades": [
             {
                 "exam": "小考 1",
@@ -60,30 +234,7 @@
             },
             {
                 "exam": "小考 2",
-                "score": 86
-            },
-            {
-                "exam": "小考 3",
-                "score": 89
-            }
-        ]
-    },
-    {
-        "id": "student5",
-        "password": "56789",
-        "name": "小麗",
-        "grades": [
-            {
-                "exam": "小考 1",
-                "score": 92
-            },
-            {
-                "exam": "小考 2",
-                "score": 95
-            },
-            {
-                "exam": "小考 3",
-                "score": 94
+                "score": 87
             }
         ]
     }

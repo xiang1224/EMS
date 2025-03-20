@@ -142,17 +142,13 @@
         ]
     },
     {
-        "id": "niao",
-        "password": "11223",
+        "id": "smartbird",
+        "password": "smartbird1102",
         "name": "韻律波 鳥",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 92
-            },
-            {
-                "exam": "小考 2",
-                "score": 94
+                "score": 100
             }
         ]
     },
@@ -209,17 +205,13 @@
         ]
     },
     {
-        "id": "luqi",
-        "password": "66778",
+        "id": "12345678",
+        "password": "12345678",
         "name": "哈蘿娜·璐姬·卡蜜拉",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 90
-            },
-            {
-                "exam": "小考 2",
-                "score": 92
+                "score": 62
             }
         ]
     },

@@ -52,17 +52,13 @@
         ]
     },
     {
-        "id": "daixi",
-        "password": "56789",
+        "id": "pudin0217",
+        "password": "goodstudent",
         "name": "林黛希",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 91
-            },
-            {
-                "exam": "小考 2",
-                "score": 85
+                "score": 70
             }
         ]
     },

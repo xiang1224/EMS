@@ -1,16 +1,12 @@
 [
     {
-        "id": "ayyan",
-        "password": "12345",
+        "id": "Anan030",
+        "password": "Coco030",
         "name": "安幼妍",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 85
-            },
-            {
-                "exam": "小考 2",
-                "score": 90
+                "score": 100
             }
         ]
     },

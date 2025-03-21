@@ -37,17 +37,13 @@
         ]
     },
     {
-        "id": "linrin",
-        "password": "45678",
+        "id": "beixin",
+        "password": "0123",
         "name": "森田凜琳",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 89
-            },
-            {
-                "exam": "小考 2",
-                "score": 87
+                "score": 88
             }
         ]
     },
@@ -166,17 +162,13 @@
         ]
     },
     {
-        "id": "chenxi",
-        "password": "55667",
+        "id": "0xc0610",
+        "password": "0xc0610",
         "name": "林晨曦",
         "grades": [
             {
                 "exam": "小考 1",
-                "score": 94
-            },
-            {
-                "exam": "小考 2",
-                "score": 96
+                "score": 71
             }
         ]
     },

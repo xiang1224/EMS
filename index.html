@@ -4,28 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微光學院救護科 - 登入</title>
+    <title>微光學院 - 登入</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h2>微光學院救護科 - 成績查詢系統</h2>
-        <input type="text" id="studentID" placeholder="輸入帳號">
-        <input type="password" id="password" placeholder="輸入密碼">
-        <button onclick="login()">登入</button>
-        <p><a href="#" class="forgot-btn" onclick="openModal()">忘記帳號/密碼</a></p>
-        <p id="error-message"></p>
-    </div>
+<div class="login-container">
+    <h2>微光學院</h2>
+    <form id="loginForm" onsubmit="login(event)">
+        <input type="text" id="studentID" placeholder="學號" required />
+        <input type="password" id="password" placeholder="密碼" required />
+        <button type="submit">登入</button>
+    </form>
+    <div id="error-message"></div>
+    <a href="#" class="forgot-password" onclick="openModal()">忘記密碼?</a>
+</div>
 
-    <!-- 忘記帳密 Modal -->
-    <div id="forgotModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3>忘記帳號或密碼</h3>
-            <p>請寫信至 <strong>黃曉翔老師</strong> 信箱</p>
-        </div>
+
+<!-- 忘記密碼彈窗 -->
+<div id="forgotModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeForgotModal()">&times;</span>
+        <h2>忘記密碼</h2>
+        <p>請寄信至 黃曉翔老師 的信箱</p>
+        </form>
+        <p id="forgotErrorMessage" style="color: red; font-size: 14px;"></p>
     </div>
+</div>
 
     <script src="./js/script.js"></script>
 </body>

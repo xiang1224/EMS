@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有學生成績總覽</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="showAllGrades()">
+    <div class="container">
+        <h2 id="teacher-name"></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>學生姓名</th>
+                    <th>考試</th>
+                    <th>成績</th>
+                </tr>
+            </thead>
+            <tbody id="all-grades-table"></tbody>
+        </table>
+        <button onclick="logout()">登出</button>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

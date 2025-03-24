@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微光學院救護科 - 我的成績</title>
+    <title>微光學院 - 我的成績</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -23,8 +23,29 @@
                 <!-- JavaScript 會填入這裡 -->
             </tbody>
         </table>
-        <button class="logout-btn" onclick="logout()">登出</button>
+        <!-- 調整按鈕順序 -->
+        <div class="button-container">
+            <button class="ebook-btn" onclick="openEbook()">打開電子書</button>
+            <button class="logout-btn" onclick="logout()">登出</button>
+        </div>
     </div>
+
+    <!-- 電子書 Modal -->
+    <div id="ebookModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeEbook()">&times;</span>
+            <h3>電子書 - 急救指南</h3>
+            <div id="ebookContent">
+                <p id="pageText">這是第一頁內容...</p>
+            </div>
+            <div class="button-container">
+                <button onclick="prevPage()">上一頁</button>
+                <button onclick="nextPage()">下一頁</button>
+            </div>
+        </div>
+    </div>
+
+
     <script src="./js/script.js"></script>
 </body>
 

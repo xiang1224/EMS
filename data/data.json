@@ -193,5 +193,33 @@
                 "score": 82
             }
         ]
+    },
+    {
+        "id": "kokiy",
+        "password": "Qazw1324",
+        "name": "蘇婉婉(外系學生)",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 0
+            }
+        ]
+    },
+    {
+        "id": "29664966",
+        "password": "0981018911",
+        "name": "吳長勳(外系學生)",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 0
+            }
+        ]
+    },
+    {
+        "id": "teacher",
+        "password": "admin123",
+        "name": "黃曉翔",
+        "role": "teacher"
     }
 ]

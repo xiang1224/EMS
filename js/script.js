@@ -588,6 +588,11 @@ function openEbook() {
     document.getElementById("pageText").innerHTML = pages[currentPage]; // 使用 innerHTML 來顯示 HTML 格式內容
 }
 
+function openEbook() {
+    alert("此功能暫時關閉！");
+    return;
+}
+
 // 關閉電子書
 function closeEbook() {
     document.getElementById("ebookModal").style.display = "none";

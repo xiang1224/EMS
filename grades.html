@@ -11,6 +11,8 @@
 <body>
     <div class="container">
         <h2>歡迎, <span id="studentName"></span></h2>
+
+        <!-- 成績區塊 -->
         <h3>你的成績：</h3>
         <table>
             <thead>
@@ -23,9 +25,18 @@
                 <!-- JavaScript 會填入這裡 -->
             </tbody>
         </table>
-        <!-- 調整按鈕順序 -->
+
+        <!-- 新增證照區塊 -->
+        <h3>已獲得證照：</h3>
+        <ul id="certificatesList" class="certificates-list">
+            <!-- JavaScript 會填入這裡 -->
+        </ul>
+
+
+
+        <!-- 按鈕區塊 -->
         <div class="button-container">
-            <button class="ebook-btn" onclick="openEbook()">打開電子書</button>
+            <button class="ebook-btn" onclick="openEbook()">證照大補帖</button>
             <button class="logout-btn" onclick="logout()">登出</button>
         </div>
     </div>
@@ -34,7 +45,7 @@
     <div id="ebookModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeEbook()">&times;</span>
-            <h3>電子書 - 急救指南</h3>
+            <h3>證照大補帖</h3>
             <div id="ebookContent">
                 <p id="pageText">這是第一頁內容...</p>
             </div>
@@ -44,7 +55,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="./js/script.js"></script>
 </body>

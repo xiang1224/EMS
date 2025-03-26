@@ -65,7 +65,20 @@ function displayGrade() {
         let row = `<tr><td>${grade.exam}</td><td>${grade.score}</td></tr>`;
         gradesTable.innerHTML += row;
     });
+
+    const certificatesList = document.getElementById("certificatesList");
+    certificatesList.innerHTML = ""; // 清空內容
+    if (user.certificates && user.certificates.length > 0) {
+        user.certificates.forEach(cert => {
+            const li = document.createElement("li");
+            li.textContent = cert;
+            certificatesList.appendChild(li);
+        });
+    } else {
+        certificatesList.innerHTML = "<li>尚未獲得任何證照</li>";
+    }
 }
+
 
 // 顯示所有學生成績（老師專用）
 async function displayAllGrades() {
@@ -389,6 +402,9 @@ const pages = [
                 </ul>
             </li>
         </ul>
+    `, 
+    `
+    <h3>基礎治療(基礎篇)</h3>
     `,
     `
     <h3>各式創傷SOP(擦傷)</h3>
@@ -453,15 +469,15 @@ const pages = [
     </li>
     <li><strong>處理步驟</strong>：
         <ul>
-            <li>/me 施打局部麻醉，減輕患者疼痛</li>
+            <li>/me 施打局部麻醉</li>
             <li>/me 迅速評估出血狀況，必要時使用止血帶或止血鉗控制出血</li>
             <li>/me 切開傷口，擴大術野以尋找異物及壞死組織</li>
             <li>/me 使用紗布吸收積血，確保手術視野清晰</li>
             <li>/me 小心移除爆炸碎片、骨骼碎片及壞死組織，避免進一步損傷</li>
             <li>/me 使用生理鹽水與抗生素溶液沖洗傷口，降低感染風險</li>
             <li>/me 進行血管修補，確保供血正常</li>
-            <li>/me 針測血流恢復狀況，確保無大出血後進行軟組織縫合</li>
-            <li>/me 使用無菌敷料包紮，避免傷口二次感染</li>
+            <li>/me 縫合表層皮膚</li>
+            <li>/me 使用無菌敷料包紮</li>
         </ul>
     </li>
     <li><strong>注意事項</strong>：
@@ -473,6 +489,158 @@ const pages = [
     </li>
 </ul>
     `,
+    `<h3>各式創傷SOP(一度燒燙傷)</h3>
+    <ul>
+    <li><strong>前置作業</strong>：
+        <ul>
+            <li>/me 檢查燒燙傷範圍與嚴重程度</li>
+            <li>/me 立即移除可能持續加熱皮膚的衣物或飾品</li>
+        </ul>
+    </li>
+    <li><strong>處理步驟</strong>：
+        <ul>
+            <li>/me 使用生理食鹽水將雜質沖走</li>
+            <li>/me 將水泡刺破</li>
+            <li>/me 塗抹燒燙傷藥膏</li>
+            <li>/me 使用無菌敷料包紮</li>
+        </ul>
+    </li>
+    <li><strong>注意事項</strong>：
+        <ul>
+            <li>避免使用冰塊降溫，以免造成血管收縮加重組織損傷</li>
+            <li>避免塗抹牙膏、醬油或蛋白等民間療法，可能導致感染</li>
+            <li>燙傷部位應避免陽光直射，以免色素沉澱或加重發炎</li>
+            <li>若燒燙傷範圍過大或患者疼痛持續加重，應回診評估</li>
+        </ul>
+    </li>
+    </ul>
+    `
+    ,
+    `
+    <h3>各式創傷SOP(二度燒燙傷)</h3>
+    <ul>
+    <li><strong>前置作業</strong>：
+        <ul>
+            <li>/me 檢查燒燙傷範圍與嚴重程度</li>
+            <li>/me 立即移除可能持續加熱皮膚的衣物或飾品</li>
+        </ul>
+    </li>
+    <li><strong>處理步驟</strong>：
+        <ul>
+            <li>/me 使用生理食鹽水將雜質沖走</li>
+            <li>/me 施打局部麻醉</li>
+            <li>/me 將水泡刺破</li>
+            <li>/me 清理燒傷區域，剪除壞死皮膚</li>
+            <li>/me 使用生理食鹽水與抗菌溶液沖洗燒傷部位</li>
+            <li>/me 使用無菌敷料覆蓋</li>
+            <li>/me 使用彈性繃帶固定燒傷包紮</li>
+        </ul>
+    </li>
+    <li><strong>注意事項</strong>：
+        <ul>
+            <li>避免使用冰塊降溫，以免造成血管收縮加重組織損傷</li>
+            <li>避免塗抹牙膏、醬油或蛋白等民間療法，可能導致感染</li>
+            <li>燙傷部位應避免陽光直射，以免色素沉澱或加重發炎</li>
+            <li>若燒燙傷範圍過大或患者疼痛持續加重，應回診評估</li>
+            <li>傷口應保持清潔乾燥，若有異味、膿液滲出或紅腫加劇，應立即回診</li>
+        </ul>
+    </li>
+    </ul>
+    `,
+    `
+    <h3>各式創傷SOP(骨裂)</h3>
+<ul>
+    <li><strong>前置作業</strong>：
+        <ul>
+            <li>/me 觀察患肢是否有明顯變形、腫脹、瘀血或壓痛</li>
+            <li>/me 進行影像學檢查（X光）</li>
+        </ul>
+    </li>
+    <li><strong>處理步驟</strong>：
+        <ul>
+            <li>/me 將患部使用固定器固定，確保骨裂部位不受額外壓力</li>
+        </ul>
+    </li>
+    <li><strong>注意事項</strong>：
+        <ul>
+            <li>叮嚀患者，若有腫脹，應使用冰敷（每次15-20分鐘，每日3-4次）以減少發炎</li>
+            <li>若患者持續疼痛超過2週未改善，應再次進行影像學評估，以排除骨折加重</li>
+            <li>避免熱敷或按摩患部，以免加重發炎與腫脹</li>
+            <li>建議補充鈣質與維生素D，以促進骨骼癒合</li>
+            <li>若患者為運動員或重複性勞動工作者，應調整訓練或工作強度，避免再度受傷</li>
+            <li>若出現劇烈疼痛、患部異常變形、或影像顯示骨裂進一步惡化，應考慮手術治療</li>
+        </ul>
+    </li>
+</ul>
+    `,
+    `
+<h3>各式創傷SOP(槍傷處理 - 表皮子彈擦傷)</h3>
+<ul>
+    <li><strong>前置作業</strong>：
+        <ul>
+            <li>/me 檢查槍傷部位，確認為表淺擦傷且無貫穿</li>
+            <li>/me 觀察出血狀況，若有活動性出血則立即壓迫止血</li>
+            <li>/me 確認傷口周圍是否有異物殘留</li>
+        </ul>
+    </li>
+    <li><strong>處理步驟</strong>：
+        <ul>
+            <li>/me 使用生理食鹽水將雜質沖走</li>
+            <li>/me 使用無菌紗布輕柔擦拭傷口周圍</li>
+            <li>/me 塗抹消炎藥膏</li>
+            <li>/me 使用無菌敷料包紮</li>
+        </ul>
+    </li>
+    <li><strong>注意事項</strong>：
+        <ul>
+            <li>避免使用酒精或碘酒直接消毒，可能刺激傷口並延緩癒合</li>
+            <li>密切觀察有無局部感染徵兆，如紅腫、熱痛、膿液滲出</li>
+            <li>確保患者近期有接種破傷風疫苗，若無則補打</li>
+            <li>指導患者避免劇烈活動，防止傷口裂開或加重出血</li>
+            <li>若出現持續性疼痛或異常腫脹，應回診評估是否有隱藏性傷害</li>
+        </ul>
+    </li>
+</ul>
+
+    `,
+    `
+        <h3>各式創傷SOP(槍傷處理 - 較深子彈擦傷)</h3>
+<ul>
+    <li><strong>前置作業</strong>：
+        <ul>
+            <li>/me 檢查槍傷部位，確認為表淺擦傷且無貫穿</li>
+            <li>/me 觀察出血狀況，若有活動性出血則立即壓迫止血</li>
+            <li>/me 確認傷口周圍是否有異物殘留</li>
+        </ul>
+    </li>
+    <li><strong>處理步驟</strong>：
+        <ul>
+            <li>/me 使用生理食鹽水將雜質沖走</li>
+            <li>/me 施打局部麻醉</li>
+            <li>/me 切開傷口，擴大術野以尋找異物及壞死組織</li>
+            <li>/me 使用紗布吸收積血，確保手術視野清晰</li>
+            <li>/me 小心移除碎片</li>
+            <li>/me 使用生理鹽水與抗生素溶液沖洗傷口</li>
+            <li>/me 進行血管修補</li>
+            <li>/me 縫合表層皮膚</li>
+            <li>/me 使用無菌敷料包紮</li>
+        </ul>
+    </li>
+    <li><strong>注意事項</strong>：
+        <ul>
+            <li>避免使用酒精或碘酒直接消毒，可能刺激傷口並延緩癒合</li>
+            <li>密切觀察有無局部感染徵兆，如紅腫、熱痛、膿液滲出</li>
+            <li>確保患者近期有接種破傷風疫苗，若無則補打</li>
+            <li>指導患者避免劇烈活動，防止傷口裂開或加重出血</li>
+            <li>若出現持續性疼痛或異常腫脹，應回診評估是否有隱藏性傷害</li>
+        </ul>
+    </li>
+</ul>
+    `,
+    `
+    <h3>進階治療(手術篇-待更新)</h3>
+    `
+    ,
     `
     <h3>各式創傷SOP(骨折手術)</h3>
 <ul>
@@ -544,41 +712,7 @@ const pages = [
     </li>
 </ul>
     `,
-    `
-    <h3>各式創傷SOP(槍傷處理 - 子彈未嵌入)</h3>
-<ul>
-    <li><strong>前置作業</strong>：
-        <ul>
-            <li>/me 迅速評估患者的生命徵象，確保呼吸道暢通</li>
-            <li>/me 檢查槍傷位置，確認子彈已貫穿</li>
-            <li>/me 觀察出血狀況，必要時立即壓迫止血</li>
-            <li>/me 依據槍傷部位決定是否進行快速轉送</li>
-        </ul>
-    </li>
-    <li><strong>處理步驟</strong>：
-        <ul>
-            <li>/me 施打鎮痛劑或局部麻醉，減輕患者疼痛</li>
-            <li>/me 若有大量出血，使用止血帶、止血夾或紗布壓迫止血</li>
-            <li>/me 清理傷口周圍，避免細菌感染</li>
-            <li>/me 進行影像學檢查（X光、CT）確認是否有殘留金屬碎片</li>
-            <li>/me 以生理鹽水與抗生素溶液沖洗貫穿傷口，去除污染物</li>
-            <li>/me 若貫穿部位有血管損傷，進行修補</li>
-            <li>/me 針測血流恢復狀況，確保無大出血後進行軟組織縫合</li>
-            <li>/me 依據傷口大小決定是否放置引流管，以避免血腫</li>
-            <li>/me 使用無菌敷料包紮，避免傷口二次感染</li>
-        </ul>
-    </li>
-    <li><strong>注意事項</strong>：
-        <ul>
-            <li>確認貫穿路徑是否影響重要器官，如肺、腸胃或脊髓</li>
-            <li>避免在未確認清潔的情況下立即封閉貫穿傷，以防感染</li>
-            <li>觀察患者是否有失血性休克的徵兆，如低血壓、心跳加快等</li>
-            <li>術後應進行抗生素治療，降低感染風險</li>
-            <li>術後應持續監測是否有內出血或併發症，如氣胸或腹腔積血</li>
-        </ul>
-    </li>
-</ul>
-    `
+    
 ];
 
 
@@ -588,10 +722,7 @@ function openEbook() {
     document.getElementById("pageText").innerHTML = pages[currentPage]; // 使用 innerHTML 來顯示 HTML 格式內容
 }
 
-function openEbook() {
-    alert("此功能暫時關閉！");
-    return;
-}
+
 
 // 關閉電子書
 function closeEbook() {

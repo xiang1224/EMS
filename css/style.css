@@ -161,6 +161,50 @@ td {
     background-color: #f9f9f9;
 }
 
+/* 設定證照列表的樣式 */
+.certificates-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.certificates-list li {
+    background-color: #f0f8ff;
+    /* 淡藍色背景 */
+    border: 1px solid #0078d4;
+    /* 藍色邊框 */
+    border-radius: 8px;
+    /* 圓角邊框 */
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.certificates-list li:hover {
+    background-color: #e0f4ff;
+    /* 鼠標懸停時變為更淡的藍色 */
+    transform: scale(1.05);
+    /* 鼠標懸停時輕微放大 */
+}
+
+.certificates-list li:before {
+    content: "🎓 ";
+    /* 使用畢業帽圖示 */
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0078d4;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
 /* 電子書 Modal */
 .modal {
     display: none;

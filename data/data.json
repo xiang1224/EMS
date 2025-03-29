@@ -268,7 +268,7 @@
     },
     {
         "id": "teacher",
-        "password": "admin123",
+        "password": "123",
         "name": "黃曉翔",
         "role": "teacher"
     }

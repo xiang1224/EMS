@@ -84,26 +84,30 @@ function displayGrade() {
 async function displayAllGrades() {
     const user = JSON.parse(localStorage.getItem('loggedInUser'));
 
+    // 確保是老師角色
     if (!user || user.role !== 'teacher') {
-        window.location.href = './index.html'; // 沒登入或學生誤進就跳回首頁
+        window.location.href = './index.html'; // 如果不是老師，跳回首頁
         return;
     }
 
-    document.getElementById("teacher-name").innerText = `歡迎, ${user.name}`;
+    const students = await fetchStudentData(); // 讀取學生數據
 
-    const students = await fetchStudentData();
-    const allGradesTable = document.getElementById('all-grades-table'); // 修正 ID
-    allGradesTable.innerHTML = ""; // 清空表格
+    const allGradesTable = document.getElementById('allGradesTable').getElementsByTagName('tbody')[0];
+    allGradesTable.innerHTML = ''; // 清空現有的表格資料
 
     students.forEach(student => {
-        if (student.role === "teacher") return; // 避免顯示老師帳號
-
-        student.grades.forEach(grade => {
-            let row = `<tr><td>${student.name}</td><td>${grade.exam}</td><td>${grade.score}</td></tr>`;
-            allGradesTable.innerHTML += row;
-        });
+        const row = document.createElement('tr');
+        row.innerHTML = `
+                    <td>${student.name}</td>
+                    <td>${student.grades[0] ? student.grades[0].score : '無'}</td>
+                    <td>${student.grades[1] ? student.grades[1].score : '無'}</td>
+                    <td>${Array.isArray(student.certificates) && student.certificates.length > 0 ? student.certificates.join(', ') : '無'}</td>
+                `;
+        allGradesTable.appendChild(row);
     });
 }
+
+
 
 // 登出功能
 function logout() {

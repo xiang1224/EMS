@@ -267,6 +267,34 @@
         ]
     },
     {
+        "id": "xiaozhu",
+        "password": "zx092848",
+        "name": "朱千旭(外系學生)",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 0
+            }
+        ],
+        "certificates": [
+            "無"
+        ]
+    },
+    {
+        "id": "zx78561211",
+        "password": "howeii55688",
+        "name": "高千昱(外系學生)",
+        "grades": [
+            {
+                "exam": "小考 1",
+                "score": 0
+            }
+        ],
+        "certificates": [
+            "無"
+        ]
+    },
+    {
         "id": "teacher",
         "password": "123",
         "name": "黃曉翔",

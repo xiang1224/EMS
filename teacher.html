@@ -28,8 +28,29 @@
                 </tbody>
             </table>
         </div>
-        <button onclick="logout()">登出</button>
+        <div class="button-container">
+            <button class="ebook-btn" onclick="openEbook()">證照大補帖</button>
+            <button class="logout-btn" onclick="logout()">登出</button>
+        </div>
     </div>
+    <!-- 電子書 Modal -->
+<div id="ebookModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeEbook()">&times;</span>
+        <h2>證照大補帖</h2>
+
+        <div id="ebookContent">
+            <p id="pageText">這是封面頁...</p>
+        </div>
+        <div class="button-container">
+            <button onclick="prevPage()">上一頁</button>
+            <button onclick="nextPage()">下一頁</button>
+        </div>
+        <div class="button-container top-buttons">
+            <button onclick="goToPage(0)">返回目錄</button>
+        </div>
+    </div>
+</div>
     <script src="./js/script.js"></script>
 </body>
 

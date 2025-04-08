@@ -44,19 +44,24 @@
     </div>
 
     <!-- 電子書 Modal -->
-    <div id="ebookModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeEbook()">&times;</span>
-            <h3>證照大補帖</h3>
-            <div id="ebookContent">
-                <p id="pageText">這是第一頁內容...</p>
-            </div>
-            <div class="button-container">
-                <button onclick="prevPage()">上一頁</button>
-                <button onclick="nextPage()">下一頁</button>
-            </div>
+<div id="ebookModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeEbook()">&times;</span>
+        <h2>證照大補帖</h2>
+
+        <div id="ebookContent">
+            <p id="pageText">這是封面頁...</p>
         </div>
+        <div class="button-container">
+            <button onclick="prevPage()">上一頁</button>
+            <button onclick="nextPage()">下一頁</button>
+        </div>
+                <div class="button-container top-buttons">
+                    <button onclick="goToPage(0)">返回目錄</button>
+                </div>
     </div>
+</div>
+
 
     <script src="./js/script.js"></script>
 </body>

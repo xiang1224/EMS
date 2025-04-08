@@ -125,7 +125,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let currentPage = 0;
-const pages = [
+const ebookPages = [
+    `
+    <h3>目錄</h3>
+<div class="content-list">
+    <p><a href="javascript:goToPage(1)">急救的定義與重要性</a></p>
+    <p><a href="javascript:goToPage(2)">現場安全與求救流程與通報技巧</a></p>
+    <p><a href="javascript:goToPage(3)">GCS意識評估</a></p>
+    <p><a href="javascript:goToPage(4)">醫材介紹</a></p>
+    <p><a href="javascript:goToPage(5)">出血與止血技術</a></p>
+    <p><a href="javascript:goToPage(6)">包紮技術與應用</a></p>
+    <p><a href="javascript:goToPage(7)">創傷處理技術</a></p>
+    <p><a href="javascript:goToPage(8)">燒燙傷的急救處理</a></p>
+    <p><a href="javascript:goToPage(9)">重度燒燙傷常見的供皮區選擇建議</a></p>
+    <p><a href="javascript:goToPage(11)">各式創傷SOP(擦傷)</a></p>
+    <p><a href="javascript:goToPage(12)">各式創傷SOP(撕裂傷)</a></p>
+    <p><a href="javascript:goToPage(13)">各式創傷SOP(異物刺穿)</a></p>
+    <p><a href="javascript:goToPage(14)">各式創傷SOP(一度燒燙傷)</a></p>
+    <p><a href="javascript:goToPage(15)">各式創傷SOP(二度燒燙傷)</a></p>
+    <p><a href="javascript:goToPage(16)">各式創傷SOP(骨裂)</a></p>
+    <p><a href="javascript:goToPage(17)">各式創傷SOP(槍傷處理 - 表皮子彈擦傷)</a></p>
+    <p><a href="javascript:goToPage(18)">各式創傷SOP(槍傷處理 - 較深子彈擦傷)</a></p>
+    <p><a href="javascript:goToPage(20)">手術前置(放置氣管內管與拔除)</a></p>
+    <p><a href="javascript:goToPage(21)">手術前置(放置CVC靜脈導管)</a></p>
+    <p><a href="javascript:goToPage(22)">手術前置(全身麻醉)</a></p>
+    <p><a href="javascript:goToPage(23)">各式創傷SOP(骨折手術)</a></p>
+    <p><a href="javascript:goToPage(24)">各式創傷SOP（三度燒燙傷處理及植皮過程）</a></p>
+    <p><a href="javascript:goToPage(25)">各式創傷SOP(槍傷處理 - 子彈嵌入)</a></p>
+    <p><a href="javascript:goToPage(26)">各式創傷SOP(內臟刺傷處理)</a></p>
+</div>
+
+    `,
     `
     <h3>急救的定義與重要性</h3>
     <p>急救是指在突發意外或疾病時，對患者進行的立即處置，旨在維持生命體徵、減少傷害、防止病情惡化。</p>
@@ -469,6 +499,80 @@ const pages = [
             </li>
         </ul>
     `, 
+    `
+    <h3>重度燒燙傷常見的供皮區選擇建議</h3>
+<ul>
+    <li><strong>優先選擇供皮區</strong>：
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>部位</th>
+                    <th>優點</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>大腿前側</td>
+                    <td>面積大、易取得、癒合速度快、可重複取皮</td>
+                </tr>
+                <tr>
+                    <td>臀部</td>
+                    <td>皮膚厚實、隱蔽、適合面積較大的供皮需求</td>
+                </tr>
+                <tr>
+                    <td>背部側腰</td>
+                    <td>皮膚彈性佳，適合中等面積需求，且術後美觀影響較小</td>
+                </tr>
+                <tr>
+                    <td>腹部下緣</td>
+                    <td>疤痕可被褲子遮住，特別適合年輕或在意外觀的患者</td>
+                </tr>
+            </tbody>
+        </table>
+    </li>
+
+    <li><strong>避免使用的供皮區</strong>：
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>部位</th>
+                    <th>原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>手掌/腳掌</td>
+                    <td>局部結構特殊，皮膚厚硬，恢復較慢</td>
+                </tr>
+                <tr>
+                    <td>臉部</td>
+                    <td>美觀需求高，通常避免作為供皮區（除非特殊美容手術需求）</td>
+                </tr>
+                <tr>
+                    <td>關節處皮膚</td>
+                    <td>活動頻繁，供皮後可能影響活動或癒合不良</td>
+                </tr>
+            </tbody>
+        </table>
+    </li>
+
+    <li><strong>根據傷口選擇供皮方式</strong>：
+        <ul>
+            <li><strong>受皮區是上肢或胸部：</strong>可考慮大腿或背部供皮。</li>
+            <li><strong>受皮區是下肢：</strong>可取對側大腿或臀部。</li>
+            <li><strong>需要多次植皮或大面積損傷：</strong>會輪替不同區域或考慮人工皮膚搭配使用。</li>
+        </ul>
+    </li>
+
+    <li><strong>供皮區皮膚類型</strong>：
+        <ul>
+            <li><strong>薄層皮膚（Split-thickness graft）</strong>：癒合快，常用於初次植皮。</li>
+            <li><strong>全層皮膚（Full-thickness graft）</strong>：適合關節或需要更好外觀與彈性的區域，但供皮區需縫合。</li>
+        </ul>
+    </li>
+</ul>
+
+    `,
 
     `
     <h3>基礎治療(基礎篇)</h3>
@@ -836,6 +940,50 @@ const pages = [
 </ul>
     `,
     `
+    <h3>各式創傷SOP（三度燒燙傷處理及植皮過程）</h3>
+<ul>
+    <li><strong>前置作業</strong>：
+        <ul>
+            <li>/me 迅速評估患者的生命徵象，確保呼吸道暢通</li>
+            <li>/me 檢查燒傷範圍與程度，確定是否為三度燒燙傷</li>
+            <li>/me 觀察出血情況，並立刻進行壓迫止血或施用止血帶</li>
+        </ul>
+    </li>
+    <li><strong>處理步驟</strong>：
+        <ul>
+            <li>/me 立即進行燒傷處置，移除患者身上任何熱源或燃燒物</li>
+            <li>/me 用大量生理食鹽水沖洗燒傷處</li>
+            <li>/me 進行傷口消毒，並使用無菌敷料包紮燒傷區域</li>
+            <li>/me 給予鎮痛劑，減輕患者的疼痛，並提供氧氣治療以防止窒息</li>
+            <li>/me 進行靜脈輸液來補充流失的液體與電解質</li>
+            <li>/me 給予抗生素治療，防止細菌感染</li>
+        </ul>
+    </li>
+    <li><strong>植皮過程</strong>：
+        <ul>
+            <li>/me 麻醉並固定患者的身體，確保手術區域無痛感</li>
+            <li>/me 確認燒傷部位已經清潔並消毒，並移除死皮及壞死組織</li>
+            <li>/me 選擇自體皮膚（通常來自大腿或腹部）進行移植</li>
+            <li>/me 使用皮膚刀切取適當區域的皮膚，確保取皮層次適當</li>
+            <li>/me 在受燒傷的區域上進行植皮操作，確保皮膚均勻且無皺褶</li>
+            <li>/me 使用縫線或醫用膠水固定皮膚</li>
+            <li>/me 使用無菌敷料進行包紮</li>
+        </ul>
+    </li>
+    <li><strong>注意事項</strong>：
+        <ul>
+            <li>確認燒傷範圍與程度，並根據病情進行相應的液體復甦和鎮痛處置</li>
+            <li>儘量避免燒傷處接觸冷水，避免造成組織冰冷傷害</li>
+            <li>術後應密切監控移植皮膚的存活狀況，若有壞死、排斥現象，需考慮進行修復或替換</li>
+            <li>長期康復期中，患者應接受心理支持，調整情緒，並持續監控傷口愈合情況</li>
+            <li>植皮手術後應防止外部創傷，並注意避免引發繃裂或感染</li>
+            <li>患者術後應遵從醫師建議，保持適當的營養攝取和護理，促進皮膚的愈合與再生</li>
+        </ul>
+    </li>
+</ul>
+
+    `,
+    `
     <h3>各式創傷SOP(槍傷處理 - 子彈嵌入)</h3>
 <ul>
     <li><strong>前置作業</strong>：
@@ -873,35 +1021,89 @@ const pages = [
     </li>
 </ul>
     `,
-    
+    `
+    <h3>各式創傷SOP(內臟刺傷處理)</h3>
+<ul>
+    <li><strong>前置作業</strong>：
+        <ul>
+            <li>/me 迅速評估患者的生命徵象，確保呼吸道暢通</li>
+            <li>/me 檢查刺傷位置，確定是否貫穿或未貫穿</li>
+            <li>/me 觀察出血狀況，必要時立即壓迫止血</li>
+            <li>/me 觀察腹部是否有膨脹或壓痛，並測量腹圍變化</li>
+        </ul>
+    </li>
+    <li><strong>處理步驟</strong>：
+        <ul>
+            <li>/me 施打鎮痛劑或局部麻醉，減輕患者疼痛</li>
+            <li>/me 若有大量出血，使用止血帶、止血夾或紗布進行局部止血</li>
+            <li>/me 清理傷口周圍，避免細菌感染</li>
+            <li>/me 確認內臟損傷部位與範圍</li>
+            <li>/me 若有氣胸、血胸或腸穿孔等情況，根據情況即時處置</li>
+            <li>/me 進行創口擴大，尋找刺入的異物，必要時進行小範圍切除或修補</li>
+            <li>/me 使用生理鹽水與抗生素溶液沖洗傷口，減少感染風險</li>
+            <li>/me 進行血管修補、縫合損傷的內臟或器官</li>
+            <li>/me 使用吸引器清理積血，確保手術視野清晰，防止血腫形成</li>
+            <li>/me 若需要，視情況放置引流管，並觀察有無滲漏液體或血液</li>
+            <li>/me 縫合表皮</li>
+            <li>/me 使用無菌敷料包紮</li>
+        </ul>
+    </li>
+    <li><strong>注意事項</strong>：
+        <ul>
+            <li>確認刺傷是否涉及重要臟器，如肺部、肝臟、脾臟、腸胃等，需緊急處置</li>
+            <li>避免用力擠壓或拉扯刺入的異物，以防止加劇內臟損傷</li>
+            <li>觀察患者是否有失血性休克的徵兆，如低血壓、心跳加快、皮膚濕冷等</li>
+            <li>術後應定期檢查傷口與生命徵象，確保無大出血或器官功能異常</li>
+            <li>術後應進行抗生素治療，並持續監測有無感染徵兆</li>
+            <li>若出現腹腔內出血或異常積液，需即時處理並觀察引流情況</li>
+        </ul>
+    </li>
+</ul>
+
+    `
 ];
 
 
-// 打開電子書
+// 開啟電子書視窗
 function openEbook() {
-    document.getElementById("ebookModal").style.display = "block";
-    document.getElementById("pageText").innerHTML = pages[currentPage]; // 使用 innerHTML 來顯示 HTML 格式內容
+    const ebookModal = document.getElementById('ebookModal');
+    ebookModal.style.display = 'block'; // 顯示電子書視窗
+    updatePageContent(); // 更新頁面內容
 }
 
-
-
-// 關閉電子書
+// 關閉電子書視窗
 function closeEbook() {
-    document.getElementById("ebookModal").style.display = "none";
+    const ebookModal = document.getElementById('ebookModal');
+    ebookModal.style.display = 'none'; // 隱藏電子書視窗
 }
 
-// 上一頁
+// 顯示當前頁面的內容
+function updatePageContent() {
+    const pageText = document.getElementById('pageText');
+    pageText.innerHTML = ebookPages[currentPage]; // 更新頁面顯示的HTML內容
+}
+
+// 顯示上一頁
 function prevPage() {
     if (currentPage > 0) {
         currentPage--;
-        document.getElementById("pageText").innerHTML = pages[currentPage];
+        updatePageContent(); // 更新顯示頁面內容
     }
 }
 
-// 下一頁
+// 顯示下一頁
 function nextPage() {
-    if (currentPage < pages.length - 1) {
+    if (currentPage < ebookPages.length - 1) {
         currentPage++;
-        document.getElementById("pageText").innerHTML = pages[currentPage];
+        updatePageContent(); // 更新顯示頁面內容
     }
+}
+
+// 跳轉到指定頁面
+function goToPage(pageNumber) {
+    if (pageNumber >= 0 && pageNumber < ebookPages.length) {
+        currentPage = pageNumber;
+        updatePageContent(); // 更新顯示頁面內容
+    }
+    
 }

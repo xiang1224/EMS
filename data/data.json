@@ -375,5 +375,11 @@
         "password": "123",
         "name": "黃曉翔",
         "role": "teacher"
+    },
+    {
+        "id": "weiguang",
+        "password": "mylovestudents",
+        "name": "黃曉翔",
+        "role": "finish"
     }
 ]

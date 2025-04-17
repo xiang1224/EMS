@@ -28,12 +28,15 @@ async function login(event) {
 
         if (user.role === 'teacher') {
             window.location.href = './teacher.html'; // 老師進入教師頁面
+        } else if (user.role === 'finish') {
+            window.location.href = './finish.html'; // 畢業生進入祝福頁面
         } else {
-            window.location.href = './grades.html'; // 學生進入個人成績頁面
+            window.location.href = './grades.html'; // 一般學生進入個人成績頁面
         }
     } else {
         document.getElementById('error-message').innerText = "帳號或密碼錯誤";
     }
+
 }
 
 
@@ -107,6 +110,179 @@ async function displayAllGrades() {
     });
 }
 
+// 顯示畢業祝福（完成學生專用）
+function displayFinishPage() {
+    const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (!user || user.role !== 'finish') {
+        window.location.href = './index.html'; // 不是 finish 就跳回首頁
+        return;
+    }
+
+    document.getElementById("finishMessage").innerHTML = `
+    <h2 style="padding: 0px;margin-bottom: 0px;text-align: center;">🎓 親愛的同學</h2>
+雖然學期還沒真正結束，
+但你們在我眼裡，早就是一位合格的救護員與醫療人員了。
+
+如果你們正在讀這封信，那代表我已經沒辦法親口對你們說「恭喜畢業」了。
+但請不要為我難過，因為我這一生最驕傲的事，不是站在講台上，也不是拯救過多少生命，而是——我曾教過你們。
+
+我不知道此刻的我身在何處，
+也許我還在某個角落，靜靜看著這片我曾無比熱愛的土地；
+也許，我早已離開，只留下某些片段記憶，殘存在你們緊急處置的動作中、心跳壓的節奏裡。
+但不管我在哪裡，有一件事我想你們永遠記得：
+
+我從來沒有離開。
+
+我知道，這段時間的你們經歷了太多超出「學生」身份該承受的重量。面對選擇、責任、甚至是道德與法律的衝突。你們曾猶豫、曾犯錯，也曾挺身而出。尤其在那幾場沒有人能忘記的傷患意外中……你們做出了選擇，承擔了後果，那不是「錯」，那是成長。
+
+你們知道我平常手機都關著，
+但我也知道——你們那天誰都沒有撥號。
+你們不是不信任我，而是已經學會了判斷、學會了前行。我為此感到驕傲。
+
+你們的手，已經不再是學生的手，而是醫生的手，
+每一次施行的急救，每一次的處置，都是生命與希望的橋樑。
+你們每一次的行動，都讓我感受到醫療的真正意義。
+急救不只是救命，它是一種信念，一種責任，一種默默付出的力量。
+
+在這裡，我想對你們每一位說些話——你們每一個，我都記得。
+
+岸本齋藤，我的助教
+謝謝你一直以來的陪伴與協助。假如我不再了，希望你能繼續把這份醫道傳下去。
+
+沈若凝，保健室老師
+或許你早一步離開這世界了。謝謝你在我忙於研究時，為我分擔種種瑣事。你的溫柔，是學院最堅韌的後盾。
+
+安幼妍
+你總是活潑外向，擅長帶動氣氛與辦活動。你讓一群本來陌生的孩子變成了彼此的夥伴。未來的醫療現場也需要這樣的溫暖與連結，繼續做那道光吧。
+
+吳風
+雖然我們之間有過不少碰撞，也曾對制度怒吼、無照執刀，但在我眼裡，你老早就是一位醫生了。只是很多時候，醫者也不得不對體制低頭。我知道你有多痛苦，也知道你有多堅強。
+
+夏目蓮司
+你總是話少，卻總在最關鍵的時候動作最準、判斷最冷靜。醫術高超，穩如泰山。未來的你，會是別人最信任的雙手。
+
+森田凜琳
+你總是愛開我玩笑，讓教室裡有了笑聲和人味。也祝福你與佳芮，能在這動盪的世界裡，找到屬於彼此的平靜與恆久。
+
+林黛希、白玥瑤
+你們是我一直很擔心的學生，但也是我最感動的驚喜。你們拿到了證照，也學會了讓人感受到你們的專業。請記得老師常說的：我們是醫生，我們要讓對方感受到安全。你們，做得到的。
+
+吳靡琳
+你總是安靜，像一抹微風。不吵不鬧，卻總是在該出現的時候出現。願你未來諸事順心，保持那份平和與堅持。
+
+李逸庭
+你是班上唯一有中醫底子的醫生。東方智慧與西方技術，在你手中結合，我期待未來的你，用你的方式療癒更多靈魂。
+
+明智熙
+也是一位安靜的你。我知道你總是默默努力、默默觀察。你的穩定與踏實，是團隊中最不可或缺的力量。願你未來順利安穩。
+
+陳錦軒
+說實話，老師對你的印象不算深刻，也許是你總低調行事。但正因如此，我相信你在默默耕耘著屬於你自己的道路。願你未來一切順利，平安健康。
+
+葉雅婷
+你腦中總有許多鬼點子，善於注意細節，對領導也有直覺的掌握力。繼續多加磨練，未來的你會是一位令人信服的領導者。
+
+韻律波 鳥
+自學的路上你走得孤獨，但你從未走錯。你身上的那份堅持與醫術，是我親眼見證的。做你想做的事，讓世界見識你真正的光。
+
+顧雲翎
+你總是在保護妹妹，讓我看見那份超越年齡的成熟與責任感。你的學習慾望很強，也很聰明，但別忘了溫柔地與世界互動，那也是一種強大。
+
+顧雲綺
+被哥哥照顧得無微不至的你，也有不輸哥哥的實力。未來你們一起並肩作戰，一定能在醫界成為絕佳拍檔。
+
+林晨曦
+你是一位中規中矩的學生，但穩定不代表平凡。醫療需要像你這樣值得信賴的中流砥柱。願你未來一切順利。
+
+哈蘿娜・璐姬・卡蜜拉
+你面對的困難比任何人都要多，但你從未因此放棄。你用醫術和堅持證明了自己，未來的路將由你來開創。別讓任何困難成為你的障礙，因為你擁有超越它的力量。
+
+鍾樂海
+最常喊我、最像天兵的學生之一，雖然偶爾粗枝大葉，但醫術其實可以的。別停下腳步。
+
+蘇婉婉（餐飲科）
+來自餐飲科的你，證明了無論領域如何，只要願意學習，都能卓越。你不僅考取了救護員執照，還展現出無比的毅力與專業。我相信你會將這份愛與關懷帶給每一位需要幫助的人。
+
+朱千旭（汽修科）
+來自汽修科的你，以解決問題的能力讓我驕傲。你將工藝中的邏輯與急救技能融合，無論未來在哪裡，都能成為出色的專業人士。保持冷靜，你會改變他人的生命。
+
+吳長勳（餐飲科）
+與蘇婉婉一樣，來自餐飲科，卻以無比的熱情與決心證明了自己。在學習中，你學會了如何在壓力下保持冷靜，並在關鍵時刻伸出援手。未來的你必定能幫助更多需要幫助的人。
+
+孩子們，請不要為我流淚。
+我不是消失了，而是換了一種方式，永遠和你們同行。
+
+當你們替病患包紮傷口時，我的手也握在你們的手上；
+當你們對病人說「沒事了，有我們在」，那句話的背後，有我的聲音。
+
+老師以你們為傲。
+
+你們是微光學院真正的重建者。
+你們是未來的曙光。
+
+——你們的老師，黃曉翔
+    </p>
+    <div class="gallery">
+    <img src="./img/pic1.png" alt="畢業照 1" onclick="showImageModal(this.src)">
+    <img src="./img/pic2.png" alt="畢業照 2" onclick="showImageModal(this.src)">
+    <img src="./img/pic3.png" alt="畢業照 3" onclick="showImageModal(this.src)">
+    <img src="./img/pic4.png" alt="畢業照 4" onclick="showImageModal(this.src)">
+    <img src="./img/pic5.png" alt="畢業照 5" onclick="showImageModal(this.src)">
+    <img src="./img/pic6.png" alt="畢業照 6" onclick="showImageModal(this.src)">
+</div>
+`;
+
+}
+
+let slideIndex = 0;
+let slideInterval;
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex].style.display = "block";
+}
+
+// 手動切換
+function plusSlides(n) {
+    clearInterval(slideInterval); // 停止自動
+    slideIndex += n;
+    showSlides(slideIndex);
+    startSlideInterval(); // 重新啟動自動
+}
+
+// 自動輪播
+function startSlideInterval() {
+    slideInterval = setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 5000); // 每 5 秒換一次
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    showSlides(slideIndex);
+    startSlideInterval();
+});
+
+
+function showImageModal(src) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = 'flex';
+    modalImg.src = src;
+}
+
+function closeImageModal() {
+    document.getElementById('imageModal').style.display = 'none';
+}
+
 
 
 // 登出功能
@@ -117,10 +293,13 @@ function logout() {
 
 // 自動顯示對應頁面內容
 document.addEventListener("DOMContentLoaded", () => {
-    if (window.location.pathname.includes('grades.html')) {
+    const path = window.location.pathname;
+    if (path.includes('grades.html')) {
         displayGrade();
-    } else if (window.location.pathname.includes('teacher.html')) {
+    } else if (path.includes('teacher.html')) {
         displayAllGrades();
+    } else if (path.includes('finish.html')) {
+        displayFinishPage();
     }
 });
 
